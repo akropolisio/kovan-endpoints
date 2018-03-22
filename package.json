@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@dharmaprotocol/dharma.js": "0.0.29",
+    "express": "^4.16.3",
+    "tiny-promisify": "^1.0.0",
+    "web3": "0.20.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "scripts/1_create_tunnel.sh && npm run serve",
+    "serve": "node app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

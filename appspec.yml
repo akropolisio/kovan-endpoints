@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user
+hooks:
+  AfterInstall:
+    - location: scripts/0_install_dependencies
+      timeout: 300
+      runas: root
+    - location: scripts/1_create_tunnel
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: scripts/2_start_server
+      timeout: 300
+      runas: root
